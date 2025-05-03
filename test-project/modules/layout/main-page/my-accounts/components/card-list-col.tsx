@@ -1,4 +1,4 @@
-import { ICardLists } from "../types/interfaces";
+import { ICardLists } from "@/modules/layout/main-page/work-queue/types/interfaces";
 import { cn } from "@/lib/utils";
 import { EllipsisVertical } from "lucide-react";
 
@@ -41,28 +41,28 @@ export function CardListCol({ dataList }: ICardLists) {
             index % 2 === 0 ? "bg-transparent" : "bg-[rgb(35,40,56)]"
           )}
         >
-          {/* ORIGINATOR */}
+
           <div className="flex items-center gap-2">
             <span className="w-8 h-8 rounded-full bg-[#2d3959] flex items-center justify-center text-xs font-bold text-white">
               {getInitials(value.originator)}
             </span>
             <span className="truncate">{value.originator}</span>
           </div>
-          {/* CLIENT/LINE */}
+
           <div className="flex flex-col">
             <span className="truncate">{value.client}</span>
             <span className="text-tw-light-greys text-xs truncate">{value.line}</span>
           </div>
-          {/* TYPE */}
+
           <span className="truncate">{value.type}</span>
-          {/* STATUS */}
+
           <div className="flex items-center gap-2">
             <span className={`w-2 h-2 rounded-full inline-block ${getStatusColor(value.status)}`}></span>
             <span className="truncate">{value.status}</span>
           </div>
-          {/* CREATED */}
+
           <span className="text-gray-400 truncate">{value.date}</span>
-          {/* ICON */}
+
           <span>
             <EllipsisVertical className="w-4 h-4 text-[#bfc8e6] hover:text-white cursor-pointer" />
           </span>
