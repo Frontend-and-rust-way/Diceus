@@ -1,4 +1,3 @@
-
 export interface IMessages {
     id: number;
     status: string | null;

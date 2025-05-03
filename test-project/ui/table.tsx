@@ -1,75 +1,5 @@
 import React from "react";
-
-const policies = [
-  {
-    line: "Marine Cargo",
-    icon: "🚢",
-    number: "17030212",
-    effDate: "6/30/2026",
-    expDate: "6/30/2027",
-    status: "Active",
-    statusColor: "bg-green-500",
-    expiringTech: "$587,500",
-    expiringPremium: "$605,000",
-    renewalToTech: "$610,000",
-    renewalTech: "$620,000",
-    renewalPremium: "$625,000",
-    rateChange: "3.3%",
-    lossRatio: "22%",
-    lossColor: "bg-green-500",
-  },
-  {
-    line: "General Liability",
-    icon: "🟢",
-    number: "4631092",
-    effDate: "6/30/2026",
-    expDate: "6/30/2027",
-    status: "Active",
-    statusColor: "bg-green-500",
-    expiringTech: "$160,000",
-    expiringPremium: "$165,000",
-    renewalToTech: "$170,000",
-    renewalTech: "$172,500",
-    renewalPremium: "$175,000",
-    rateChange: "6.1%",
-    lossRatio: "55%",
-    lossColor: "bg-yellow-400",
-  },
-  {
-    line: "Workers Comp",
-    icon: "🟣",
-    number: "9182371",
-    effDate: "Pending",
-    expDate: "Pending",
-    status: "Pending",
-    statusColor: "bg-yellow-400",
-    expiringTech: "$0",
-    expiringPremium: "$0",
-    renewalToTech: "$73,500",
-    renewalTech: "$75,000",
-    renewalPremium: "$75,000",
-    rateChange: "N/A",
-    lossRatio: "N/A",
-    lossColor: "bg-gray-400",
-  },
-  {
-    line: "Umbrella",
-    icon: "🔴",
-    number: "5274936",
-    effDate: "13/03/2026",
-    expDate: "13/03/2027",
-    status: "Active",
-    statusColor: "bg-green-500",
-    expiringTech: "$245,000",
-    expiringPremium: "$250,000",
-    renewalToTech: "$267,500",
-    renewalTech: "$270,000",
-    renewalPremium: "$275,000",
-    rateChange: "10.0%",
-    lossRatio: "78%",
-    lossColor: "bg-red-500",
-  },
-];
+import {policies} from "@/mock/mock-ui-table2"
 
 const total = {
   expiringTech: "$992,500",
@@ -135,7 +65,7 @@ const TableRow = ({ p }: { p: typeof policies[0] }) => (
 
 export default function PoliciesTable() {
   return (
-    <div className="min-h-screen px-[45px] text-white ">
+    <div className="min-h-screen text-white ">
       <h1 className="text-3xl font-bold mb-6">Policies</h1>
       <div className="bg-[#1a2236] rounded-2xl p-6 shadow-lg">
         <div className="flex flex-col md:flex-row md:items-center gap-4 mb-6">

@@ -9,7 +9,7 @@ interface IQuickActionCard{
 export function  QuickActionCard({className}: IQuickActionCard) {
 
     return  (   
-        <CardWrapper className={cn("w-full max-w-[290px] p-[10px]  gap-[0px]",className)}>
+        <CardWrapper className={cn("w-full p-[10px] gap-[0px]",className)}>
             <span className="text-white text-[20px]">Quick Actions</span>    
             {quickActions.map(action => ( 
               <button key={action} className="rounded-xl h-[40px] bg-tw-light-blue text-white my-[5px] w-full">

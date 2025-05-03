@@ -7,7 +7,9 @@ function HeaderBase({ children, className }: IHeader) {
   return (
       <header
           className={cn(
-              "mt-[10px] py-[10px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-[10px] sm:gap-5 px-[45px] text-sm sm:text-base md:text-2xl border-b-2 border-[rgb(56,60,75)]",
+              "mt-[10px] py-[10px] flex flex-col sm:flex-row items-start",
+              "sm:items-center justify-between gap-[10px] sm:gap-5 px-[45px] text-sm",
+              "sm:text-base md:text-2xl border-b-2 border-[rgb(56,60,75)]",
               className
           )}
       >

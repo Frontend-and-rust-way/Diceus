@@ -5,8 +5,8 @@ import { Indicator } from "./components/indicator";
 export function PortfolioGoals() {
 
   return (
-    <CardWrapper className="w-full max-w-[285px] py-[5px] p-[20px] gap-[10px]  h-[535px] ">
-      <span className="text-white text-[20px]">
+    <CardWrapper className="w-full gap-[2px]  md:max-w-[285px]   py-[5px] p-[10px] md:gap-[5px] h-[auto]  ">
+      <span className="text-white text:-[16px]  sm:text-[20px]">
         Portfolio goals
       </span>
       <span className="text-[rgb(148,163,184)] text-[12px]">PORTFOLIO LOSS RATIO TARGET</span>
@@ -23,8 +23,11 @@ export function PortfolioGoals() {
         bottomLabel="On Target"
         barWidths={["40.2%", "28%", "33%"]}
       />
-        <Indicator  spanDescription="NEW BUSINESS TARGET" indicatorValue="8.1M" totalValue="$12M" />
-        <Indicator  spanDescription="ANNUAL GWP TARGET" indicatorValue="28.4M" totalValue="$42M" />
+        <div className="flex flex-col  gap-[10px] sm:gap-[30px] mt-[30px]">
+          <Indicator  spanDescription="NEW BUSINESS TARGET" indicatorValue="8.1M" totalValue="$12M" />
+          <Indicator  spanDescription="ANNUAL GWP TARGET" indicatorValue="28.4M" totalValue="$42M" />
+        </div>
+
     </CardWrapper>
   );
 }

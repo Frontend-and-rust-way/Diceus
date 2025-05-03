@@ -23,13 +23,13 @@ export function InfoCards(props: IInfoCardsProps) {
             <button className="flex items-center justify-center px-5 py-1 rounded-2xl bg-blue-800 text-white text-sm">
               {buttonMode}
             </button>
-            <span className="text-sm text-black">{subject}</span>
+            <span className="text-sm text-white">{subject}</span>
           </>
         )}
       </div>
 
-      <span className="text-black text-sm">{name}</span>
-      <span className="text-white text-sm max-w-full break-words">{description}</span>
+      <span className="text-white text-sm">{name}</span>
+      <span className="text-white text-sm max-w-full text-justify ">{description}</span>
 
       {isButtonsExists && (
         <div className="flex flex-col   flex-wrap gap-2">
