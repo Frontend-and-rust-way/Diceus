@@ -8,7 +8,7 @@ export function CardList({ mapData, className,autoFocusIndex = 0 }: ICardList) {
         <button
           key={value}
           autoFocus={autoFocusIndex === index ? true : false}
-          className={cn("bg-black outline-0 px-[30px] h-[40px] focus:bg-tw-light-blue rounded-2xl text-white", className)}
+          className={cn("bg-black text-[14px]  lg:text-[16px]  px-[20px] lg:px-[30px] h-[40px] focus:bg-tw-light-blue rounded-2xl text-white", className)}
         >
           {value}
         </button>
