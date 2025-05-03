@@ -5,6 +5,7 @@ import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
 import { INavListSidebar } from "./types/interface";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export function NavListSidebar({className,lengthButtons }: INavListSidebar) {
   
@@ -19,8 +20,8 @@ export function NavListSidebar({className,lengthButtons }: INavListSidebar) {
                 key={`${value.label}-${index}`}
                 className={cn(value.label === "Goals & Rules" ? "w-[170px]" : "")}
               >
-                <span className="text-tw-light-blue">{value.icon}</span>
-                <span className="flex text-[15px]">{value.label}</span>
+                 <span className="text-tw-light-blue">{value.icon}</span>
+                 <Link href={value.link} className="flex text-[15px]">{value.label}</Link>
               </Button>
           ))}
         </div>
