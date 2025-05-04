@@ -1,13 +1,13 @@
 import React from "react";
 import { EllipsisVertical } from "lucide-react";
-
-// ... existing code ...
+import { tableHeaders } from "@/modules/layout/main-page/my-accounts/constants/table-headers";
+import { accounts } from "@/mock/mock-ui-table";
 
 export default function MyAccountsTable() {
   return (
     <div className="px-4 sm:px-6 md:px-[45px] min-h-screen text-white p-4 sm:p-6 md:p-8">
       <div className="bg-[#1a2236] rounded-2xl p-4 sm:p-6 shadow-lg">
-        {/* Header & Actions */}
+ 
         <div className="flex flex-col gap-4 mb-6">
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <span className="text-white text-2xl sm:text-3xl font-semibold">My accounts</span>
@@ -24,7 +24,7 @@ export default function MyAccountsTable() {
             <button className="rounded-2xl bg-tw-light-blue text-white px-3 sm:px-4 py-2 text-sm sm:text-base border border-tw-light-blue">+ New</button>
           </div>
         </div>
-        {/* Table */}
+
         <div className="overflow-x-auto -mx-4 sm:mx-0">
           <div className="min-w-[1200px]">
             <div className="grid grid-cols-11 w-full items-center text-[10px] sm:text-[12px] py-2 px-4 bg-[rgb(37,42,61)] border-b border-gray-700">
