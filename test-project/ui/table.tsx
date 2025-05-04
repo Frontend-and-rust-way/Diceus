@@ -1,15 +1,6 @@
 import React from "react";
 import {policies} from "@/mock/mock-ui-table2"
-
-const total = {
-  expiringTech: "$992,500",
-  expiringPremium: "$1,020,000",
-  renewalToTech: "$1,121,000",
-  renewalTech: "$1,137,500",
-  renewalPremium: "$1,150,000",
-  rateChange: "6.9%",
-  lossRatio: "58.3%",
-};
+import { total } from "@/mock/mock-ui-table2";
 
 const TableHeader = () => (
   <thead>

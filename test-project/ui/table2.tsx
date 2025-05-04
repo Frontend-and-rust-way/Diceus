@@ -1,7 +1,7 @@
 import React from "react";
 import { EllipsisVertical } from "lucide-react";
 import { tableHeaders } from "@/modules/layout/main-page/my-accounts/constants/table-headers";
-import {accounts} from "@/mock/mock-ui-table"
+import { accounts } from "@/mock/mock-ui-table";
 
 function formatPremium(premium: number): string {
   if (premium >= 1_000_000) return `$${(premium / 1_000_000).toFixed(1)}M`;
@@ -10,9 +10,9 @@ function formatPremium(premium: number): string {
 }
 
 function getLossColor(loss: number) {
-  if (loss < 30) return "bg-[#2ED47A]"; 
-  if (loss < 50) return "bg-[#F6C343]"; 
-  return "bg-[#E94F4F]"; 
+  if (loss < 30) return "bg-[#2ED47A]";
+  if (loss < 50) return "bg-[#F6C343]";
+  return "bg-[#E94F4F]";
 }
 
 function getAppetiteColor(appetite: string) {
@@ -39,13 +39,12 @@ function getStatusColor(status: string) {
   }
 }
 
-function getWinnabilityDots(winnability: string) {
-
+function getWinnabilityDots(winnability: string, rowIndex: number) {
   return (
     <div className="flex items-center gap-1 px-3 py-1 border border-[#3A7BFF] rounded-full">
-      {[1, 2, 3, 4].map((i) => (
+      {[1, 2, 3, 4].map((value) => (
         <div
-          key={i}
+          key={`dot-${rowIndex}-${value}`}
           className="w-2 h-2 rounded-full bg-[#3A7BFF]"
         />
       ))}
@@ -136,7 +135,7 @@ export default function MyAccountsTable() {
                     </span>
                   </div>
                   <div className="flex items-center justify-between gap-2">
-                    {getWinnabilityDots(account.winnability)}
+                    {getWinnabilityDots(account.winnability, index)}
                     <button className="rounded-full p-1 border border-[#E6EAF5] hover:bg-[#232B43] transition-colors">
                       <EllipsisVertical className="w-5 h-5 text-[#E6EAF5]" />
                     </button>
