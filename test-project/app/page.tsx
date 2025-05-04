@@ -31,7 +31,6 @@ export default function Home() {
           <Cardix />
           <QuickActionCardMarketingIntelignece/>
         </div>
-        {/* {isTablet ? (<QuickActionCardMarketingIntelignece/>) : null} */}
             <MyAccountsTable/>
     </main>
   );

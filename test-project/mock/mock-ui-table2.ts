@@ -69,7 +69,7 @@ export const policies = [
     },
   ];
   
-  const total = {
+ export const total = {
     expiringTech: "$992,500",
     expiringPremium: "$1,020,000",
     renewalToTech: "$1,121,000",
